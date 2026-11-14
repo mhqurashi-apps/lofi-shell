@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Support — Lofi Shell</title>
+<meta name="description" content="Support for Lofi Shell: connecting, Mosh, keys, SFTP, Pro and purchases.">
+<style>
+  :root {
+    --ink: #17171a;
+    --muted: #6e6862;
+    --cream: #f6f1e8;
+    --paper: #fffcf7;
+    --line: #e7dccd;
+    --teal: #1e6c60;
+    --lime: #4f7a22;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 40px 20px 72px;
+    background: var(--cream);
+    color: var(--ink);
+    font: 17px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  main { max-width: 720px; margin: 0 auto; }
+  h1 { font-size: 2.1rem; line-height: 1.15; margin: 0 0 4px; letter-spacing: -.02em; }
+  h2 { font-size: 1.2rem; margin: 36px 0 8px; letter-spacing: -.01em; }
+  h3 { font-size: 1rem; margin: 20px 0 4px; }
+  p { margin: 0 0 14px; }
+  .updated { color: var(--muted); font-size: .92rem; margin-bottom: 8px; }
+  .lede {
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    padding: 18px 20px;
+    margin: 22px 0 8px;
+  }
+  .lede strong { color: var(--teal); }
+  .app {
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    padding: 18px 20px;
+    margin: 18px 0;
+  }
+  .app h3 { margin-top: 0; }
+  .app p:last-child { margin-bottom: 0; }
+  ul { margin: 0 0 14px; padding-left: 22px; }
+  li { margin-bottom: 7px; }
+  code { background: #efe7da; padding: 2px 6px; border-radius: 6px; font-size: .92em; }
+  a { color: var(--teal); }
+  .tail {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--line);
+    color: var(--muted);
+    font-size: .95rem;
+  }
+</style>
+</head>
+<body>
+<main>
+  <h1>Support</h1>
+  <p class="updated">Lofi Shell &middot; SSH + Mosh terminal for iOS and Android</p>
+
+  <div class="card">
+    <p><strong>Something not working?</strong> Tell us what happened and we will
+    help. Include the app version from Settings and your device model.</p>
+  </div>
+
+  <h2>Get in touch</h2>
+  <p>Email: <a href="mailto:mhqurashi.apps+support@gmail.com">mhqurashi.apps+support@gmail.com</a></p>
+  <p>Include the app version from Settings &rarr; About and your device model.
+  We answer by email; there is no account or ticket system.</p>
+
+  <h2>It helps to know</h2>
+  <ul>
+    <li>The app version (Settings &rarr; About) and your device model.</li>
+    <li>Which screen or flow you were in.</li>
+    <li>What you expected, and what happened instead.</li>
+    <li>Any error text, plus a screenshot if you can take one.</li>
+  </ul>
+
+  <h2>Connecting</h2>
+  <p>Open <strong>Hosts</strong>, tap <strong>Add host</strong>, then enter the
+  address, user and port (22 by default). Choose a password or private key. The
+  first connection asks you to trust the host key: check the fingerprint with
+  your server administrator before accepting.</p>
+
+  <h3>Mosh</h3>
+  <p>Mosh needs <code>mosh-server</code> on the remote host. If it is missing, use
+  SSH or install the <code>mosh</code> package. Mosh survives network changes but
+  not app suspension or a kill.</p>
+
+  <h3>Keys and errors</h3>
+  <p>Passwords and keys are stored in the iOS Keychain or Android Keystore. Error
+  banners have a <strong>Details</strong> action with the full message and a Copy
+  button; send us that text if you need help.</p>
+
+  <h3>Files and AI</h3>
+  <p>Open a session and choose <strong>Files</strong>. Servers without SFTP fall
+  back to shell commands. AI is optional and uses the endpoint and key you
+  enter; no prompt is sent until you ask a question.</p>
+
+  <h2>Pro and purchases</h2>
+  <p>The app is free and sells a Pro tier: a one-time purchase or a yearly
+  subscription. The price shown in the app comes from the store. Pro unlocks
+  the server monitor, log tail, Git panel, port forwards and SOCKS5, the code
+  editor, the AI assistant, jump hosts, the transfer queue, folders and tags,
+  JSON backup and iCloud sync, unlimited hosts and snippets, and Android Local
+  Linux.</p>
+  <p>If you reinstall or change device, open <strong>Settings &rarr; Lofi Shell
+  Pro &rarr; Restore purchases</strong> and sign in with the store account you
+  bought with. A yearly plan renews until you cancel it in your store account;
+  you keep Pro until the period ends. Refunds are handled by the store.</p>
+  <p>New users can try Pro free for a week before the yearly plan starts. The
+  trial is set by the store, so its length and the price after it are shown in
+  the app when you open the Pro sheet; if you do nothing, the trial ends on
+  its own and the yearly price begins then.</p>
+
+  <h2>iCloud sync and the app lock</h2>
+  <p>Both are off until you turn them on. iCloud sync needs this device signed
+  into iCloud; the simulator, or a build whose profile lacks the iCloud
+  entitlement, shows <em>not available in this build</em>. The app lock uses Face
+  ID, Touch ID or the device passcode; if the device has no check set up, the
+  switch refuses to turn on.</p>
+
+  <h2>Backup</h2>
+  <p><strong>Settings &rarr; Backup &amp; sync &rarr; Export and import</strong>
+  writes your hosts, folders, snippets and settings as JSON. Passwords, keys and
+  passphrases are never included.</p>
+
+  <h2>Privacy</h2>
+  <p>Lofi Shell has no account, no analytics and no backend of ours. Read the
+  <a href="privacy.html">privacy policy</a>.</p>
+  <div class="tail">
+    <p>Lofi Shell &middot; <a href="index.html">Home</a> &middot;
+    <a href="privacy.html">Privacy</a> &middot;
+    <a href="support.html">Support</a></p>
+  </div>
+</main>
+</body>
+</html>
